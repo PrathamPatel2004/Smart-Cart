@@ -8,3 +8,27 @@ body{
     width : 90%;
     margin : auto;
 }
+
+.link0{
+    text-decoration: none;
+    color : black;
+}
+
+.link0:hover {
+    color : rgb(0, 200, 230);
+}
+
+
+.link1{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color : black;
+    list-style: none;
+}
+
+.link1:hover {
+    color : green;
+}
+
+.MuiBadge-badge{background-color: red !important;}
