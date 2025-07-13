@@ -102,14 +102,14 @@ function Navbar(){
     return (
         <>
             <nav>
-                <div className="navbar container flex items-center justify-end gap-2">
-                    <div className="col_1 w-[18%]">
+                <div className="navbar container flex items-center justify-start gap-2">
+                    <div className="col_1 w-[17%]">
                         <Button aria-haspopup="true" aria-expanded={CategoryPanelOpen} className="!text-black" onClick={OpenCategoryPanel}>
                             <WidgetsOutlinedIcon className="mr-1" />Shop By Category<KeyboardArrowDownOutlinedIcon className="ml-3" />
                         </Button>
                     </div>
 
-                    <div className="col_2 w-[64%]" ref={navRef}>
+                    <div className="col_2 w-[66%]" ref={navRef}>
                         <ul className="flex items-center gap-4 relative">
                             {navItems.map(item => (
                                 <li className="list-none relative" key={item.name} onMouseEnter={() => setActiveNavItem(item)}>
@@ -137,7 +137,7 @@ function Navbar(){
                         </ul>
                     </div>
 
-                    <div className="col_3 w-[18%] !flex !items-center !justiify-end">
+                    <div className="col_3 w-[17%] !flex !items-center !justiify-end">
                         <Button aria-haspopup="true" aria-expanded={AddressPanelOpen} className="!text-black w-auto" onClick={OpenAddressPanel}>
                             <LocationOnOutlinedIcon className="mr-2" />
                             Choose Location
