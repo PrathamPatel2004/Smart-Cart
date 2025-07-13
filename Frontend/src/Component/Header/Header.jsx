@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg"
 import { Button } from "@mui/material";
@@ -10,6 +9,7 @@ import Tooltip from '@mui/material/Tooltip';
 import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingBagRoundedIcon from '@mui/icons-material/ShoppingBagRounded';
+import Navbar from "../NavBar/Nabar.jsx";
 
 function Header() {
     const NoteField = ["Note 1", "Note 2"]
@@ -80,6 +80,10 @@ function Header() {
                         </ul>
                     </div>
                 </div>
+            </div>
+
+            <div className='navbar py-2 mt-1 border-t-[1px] border-gray-400 border-b-[1px] bg-[white]'>
+                <Navbar />
             </div>
         </header>
     )
