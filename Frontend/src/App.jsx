@@ -1,18 +1,17 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route,} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Component/Header/Header.jsx';
-import SearchBar from './Component/SearchBar/SearchBar.jsx';
-import HeadSlider from './Component/HeadSlider/HeadSlider.jsx';
-import './App.css'
+import Home from './Pages/Home.jsx';
+import './App.css';
 
 function App() {
-
   return (
     <Router>
       <Header />
-      <HeadSlider />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

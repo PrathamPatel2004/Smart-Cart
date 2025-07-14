@@ -17,24 +17,26 @@ function HeadSlider() {
     ];
 
     return (
-        <Swiper
-            spaceBetween={20}
-            slidesPerView={1}
-            loop={true}
-            autoplay={{ delay: 2500, disableOnInteraction: false }}
-            navigation={true}
-            modules={[Autoplay, Navigation]}
-            className="sliderHome !p-[15px]"
-        >
-        {slides.map((src, index) => (
-                <SwiperSlide key={index}>
-                    <div className="item rounded-[10px] overflow-hidden">
-                        <img src={src} alt={`Banner slide ${index + 1}`} className="w-full h-auto object-cover" />
-                    </div>
-                </SwiperSlide>
-            ))}
-            
-        </Swiper>
+        <div className="container2">
+            <Swiper
+                spaceBetween={20}
+                slidesPerView={1}
+                loop={true}
+                autoplay={{ delay: 2500, disableOnInteraction: false }}
+                navigation={true}
+                modules={[Autoplay, Navigation]}
+                className="sliderHome"
+            >
+            {slides.map((src, index) => (
+                    <SwiperSlide key={index}>
+                        <div className="item rounded-[10px] overflow-hidden">
+                            <img src={src} alt={`Banner slide ${index + 1}`} className="w-full h-auto object-cover" />
+                        </div>
+                    </SwiperSlide>
+                ))}
+                
+            </Swiper>
+        </div>
     );
 }
 
