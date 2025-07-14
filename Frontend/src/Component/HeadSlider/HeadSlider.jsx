@@ -1,33 +1,40 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react"; // use /react here
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
 
-import HeadSlider_1 from "../../assets/HeadSlider_1.png";
-import HeadSlider_2 from "../../assets/HeadSlider_2.jpg";
-import HeadSlider_3 from "../../assets/HeadSlider_3.jpg";
-import HeadSlider_4 from "../../assets/HeadSlider_4.jpg";
+import "swiper/css";
+import "swiper/css/navigation";
 
 function HeadSlider() {
+    const slides = [
+        "https://serviceapi.spicezgold.com/download/1751685200593_1721277298204_banner.jpg",
+        "https://serviceapi.spicezgold.com/download/1751685183248_NewProject(6).jpg",
+        "https://serviceapi.spicezgold.com/download/1751685164864_NewProject(10).jpg",
+        "https://serviceapi.spicezgold.com/download/1751685144346_NewProject(11).jpg",
+        "https://serviceapi.spicezgold.com/download/1751685130717_NewProject(8).jpg",
+        "https://serviceapi.spicezgold.com/download/1748955932914_NewProject(1).jpg",
+        "https://serviceapi.spicezgold.com/download/1748955908049_NewProject(13).jpg",
+    ];
+
     return (
-        <div className="container !my-[30px]">
-            <Swiper
-                spaceBetween={30}
-                centeredSlides={true}
-                autoplay={{ delay: 2500, disableOnInteraction: false }}
-                pagination={{ clickable: true }}
-                navigation={true}
-                modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper"
-            >
-                <SwiperSlide><img src={HeadSlider_1} alt="HeadSlider1" className="w-full !h-[50%]" /></SwiperSlide>
-                <SwiperSlide><img src={HeadSlider_2} alt="HeadSlider2" className="w-full !h-[50%]" /></SwiperSlide>
-                <SwiperSlide><img src={HeadSlider_3} alt="HeadSlider3" className="w-full !h-[50%]" /></SwiperSlide>
-                <SwiperSlide><img src={HeadSlider_4} alt="HeadSlider4" className="w-full !h-[50%]" /></SwiperSlide>
-            </Swiper>
-        </div>
+        <Swiper
+            spaceBetween={20}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            navigation={true}
+            modules={[Autoplay, Navigation]}
+            className="sliderHome !p-[15px]"
+        >
+        {slides.map((src, index) => (
+                <SwiperSlide key={index}>
+                    <div className="item rounded-[10px] overflow-hidden">
+                        <img src={src} alt={`Banner slide ${index + 1}`} className="w-full h-auto object-cover" />
+                    </div>
+                </SwiperSlide>
+            ))}
+            
+        </Swiper>
     );
 }
 

@@ -32,3 +32,26 @@ body{
 }
 
 .MuiBadge-badge{background-color: red !important;}
+
+.swiper-button-prev, .swiper-button-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+}
+
+.swiper-button-prev::after {
+    margin-right: 2px;
+    font-size: 20px !important;
+    color: #000;
+} 
+
+.swiper-button-next::after{
+    margin-left: 2px;
+    font-size: 20px !important;
+    color: #000;
+} 
